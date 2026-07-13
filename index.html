@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RAFALIMANANA Mamitiana — Portfolio</title>
+<meta name="description" content="Portfolio professionnel — Développeur Web. Découvrez mes compétences, expériences et projets." />
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- AOS Animations -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Particules animées en fond -->
+<div class="bg-grid"></div>
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+<div class="bg-orb orb-3"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="#hero">
+      <span class="logo-bracket">&lt;</span>RAFALIMANANA Mamitiana<span class="logo-bracket">/&gt;</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+         <li class="nav-item"> <a class="nav-link" href="#formation">Formation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+        <li class="nav-item"><a class="nav-link btn-contact" href="#contact">Contact</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7" data-aos="fade-right">
+        <p class="hero-greeting"> Bonjour, je suis</p>
+        <h1 class="hero-title">
+          <span class="text-gradient">RAFALIMANANA Mamitiana</span>
+        </h1>
+        <h2 class="hero-subtitle typewriter">Développeur Full-Stack</h2>
+        <p class="hero-desc">
+           Capable de travailler en équipe et de mener un projet du prototype à la réalisation.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-neon">Voir mes projets <i class="fas fa-arrow-right ms-2"></i></a>
+          <a href="#contact" class="btn btn-outline-neon">Me contacter</a>
+        </div>
+        <div class="hero-socials">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:votre@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block text-center" data-aos="fade-left">
+        <div class="hero-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">
+            <img src="images/avatar.jpg" alt="Photo de profil" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+</header>
+
+<!-- À PROPOS -->
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-number">01.</span>
+      <h2 class="section-title">À propos de moi</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7" data-aos="fade-up">
+        <p class="about-text">
+         Je suis un <span class="highlight">Développeur Full Stack </span> passionné par les technologies du web, les <span class="highlight">systèmes et les réseaux informatiques</span>.
+          Fort d'une expérience dans la conception et le développement d'applications modernes,
+           je m'efforce de transformer des besoins complexes en solutions performantes, intuitives et sécurisées.
+        </p>
+        <p class="about-text">
+          Mon approche allie <span class="highlight">créativité </span>, <span class="highlight">rigueur technique </span> et <span class="highlight">sens de l'innovation</span> afin de concevoir des projets fiables et évolutifs. 
+          Curieux et motivé, je suis constamment à la recherche de nouvelles connaissances et de défis me permettant d'élargir mes compétences 
+          dans le développement logiciel, l'administration des systèmes et des réseaux
+        </p>
+<div class="about-stats row mt-4">
+  <div class="col-4">
+    <div class="stat-num">2+</div>
+    <div class="stat-label">Années de formation</div>
+  </div>
+
+  <div class="col-4">
+    <div class="stat-num">10+</div>
+    <div class="stat-label">Projets réalisés</div>
+  </div>
+
+  <div class="col-4">
+    <div class="stat-num">10+</div>
+    <div class="stat-label">Technologies maîtrisées</div>
+  </div>
+</div>
+        <a href="cv.pdf" download class="btn btn-neon mt-4"><i class="fas fa-download me-2"></i>Télécharger mon CV</a>
+      </div>
+      <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="info-card">
+          <h4>Informations</h4>
+         <ul class="info-list">
+  <li><i class="fas fa-user"></i><strong>Nom :</strong> RAFALIMANANA Mamitiana</li>
+
+  <li><i class="fas fa-calendar"></i><strong>Âge :</strong> 22 ans</li>
+
+  <li><i class="fas fa-map-marker-alt"></i><strong>Ville :</strong> Fianarantsoa</li>
+
+  <li>
+    <i class="fas fa-envelope"></i>
+    <strong>Email :</strong>
+    <a href="mailto:rafalimananamamitiana0@gmail.com">
+      rafalimananamamitiana0@gmail.com
+    </a>
+  </li>
+
+  <li>
+    <i class="fas fa-phone"></i>
+    <strong>Tél :</strong>
+    <a href="tel:+261321805611">
+      +261 32 18 056 11
+    </a> • <a href="tel:+261382248847">
+      +261 38 22 488 47</a>
+  </li>
+
+  <li><i class="fas fa-graduation-cap"></i><strong>Niveau :</strong> BAC +2 en informatique</li>
+
+  <li><i class="fas fa-language"></i><strong>Langues :</strong> Malagasy, Français, Anglais</li>
+
+  <li><i class="fas fa-check-circle"></i><strong>Disponibilité :</strong> Immédiate</li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="skills" class="section-padding section-alt">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-number">02.</span>
+      <h2 class="section-title">Mes Compétences</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <h4>Frontend</h4>
+          <div class="skill-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Vue.js</span><span>Tailwind CSS</span><span>Bootstrap5</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <h4>Backend</h4>
+          <div class="skill-tags">
+            <span>PHP</span><span>MySQL</span><span>API REST</span><span>Supabase</span><span>Node.js</span><span>Python</span><span>Docker</span><span>Django</span><span>C#</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+          <h4>Design</h4>
+          <div class="skill-tags">
+            <span>Canva</span><span>Photoshop</span><span>Figma</span><span>illustrator</span><span>...</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-tools"></i></div>
+          <h4>Outils</h4>
+          <div class="skill-tags">
+            <span>Git</span><span>GitHub</span><span>Xamp</span><span>Node.js</span><span>VS Code</span><span>Docker</span><span>Linux</span><span>GNS3</span><span>...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barres de progression -->
+    <div class="row mt-5 g-4">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="skill-bar"><div class="d-flex justify-content-between"><span>HTML / CSS / Bootstrap</span><span>96%</span></div><div class="progress"><div class="progress-bar" style="width:96%"></div></div></div>
+        <div class="skill-bar"><div class="d-flex justify-content-between"><span>JavaScript</span><span>85%</span></div><div class="progress"><div class="progress-bar" style="width:85%"></div></div></div>
+        <div class="skill-bar"><div class="d-flex justify-content-between"><span>PHP</span><span>97%</span></div><div class="progress"><div class="progress-bar" style="width:97%"></div></div></div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="skill-bar"><div class="d-flex justify-content-between"><span>MySQL</span><span>95%</span></div><div class="progress"><div class="progress-bar" style="width:95%"></div></div></div>
+        <div class="skill-bar"><div class="d-flex justify-content-between"><span>Python</span><span>80%</span></div><div class="progress"><div class="progress-bar" style="width:80%"></div></div></div>
+        <div class="skill-bar"><div class="d-flex justify-content-between"><span>Git / GitHub</span><span>85%</span></div><div class="progress"><div class="progress-bar" style="width:85%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPÉRIENCE -->
+<section id="experience" class="section-padding">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-number">03.</span>
+      <h2 class="section-title">Mon Expérience</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Depuis Mai 2026</span>
+          <h4>Membre Relais</h4>
+          <h6 class="text-cyan">BIANCO</h6>
+          <p>Relais d'information et participation aux initiatives de promotion de l'intégrité et de la bonne gouvernance.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Depuis Mars 2026</span>
+          <h4>Bénévole — Responsable Logistique</h4>
+          <h6 class="text-cyan">Orange Digital Center</h6>
+          <p>Coordination et suivi des opérations logistiques au sein de l'organisation.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FORMATION & CERTIFICATIONS -->
+<section id="formation" class="section-padding">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-number">04.</span>
+      <h2 class="section-title">Formations et Certifications</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="row g-4">
+     <!-- FORMATION -->
+<div class="col-lg-6" data-aos="fade-right">
+  <div class="info-card h-100">
+    <h4><i class="fas fa-graduation-cap me-2"></i>Formation</h4>
+
+    <div class="cert-item">
+      <i class="fas fa-university"></i>
+      • BAC +2 en Informatique - École Nationale d'Informatique (ENI), Fianarantsoa (2026)
+    </div>
+
+    <p></p>
+
+    <div class="cert-item">
+      <i class="fas fa-university"></i>
+      • BAC +1 en Informatique - École Nationale d'Informatique (ENI), Fianarantsoa (2025)
+    </div>
+
+    <p></p>
+
+
+    <div class="cert-item">
+      <i class="fas fa-school"></i>
+      • Baccalauréat Série S - Lycée Privé CPE, Fianarantsoa (2024)
+    </div>
+
+    <p></p>
+
+    <div class="cert-item">
+      <i class="fas fa-school"></i>
+      • Baccalauréat Série D - Cours Fameno, Antsirabe (2023)
+    </div>
+
+  </div>
+</div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="info-card h-100">
+           <h4><i class="fas fa-certificate me-2"></i>Certifications</h4>
+
+    <div class="cert-item"> 
+        <i class="fas fa-trophy"></i>
+              •  Youth Hackathon 2025 - UNESCO  Colombie
+    </div>
+
+<p></p>
+
+    <div class="cert-item">
+        <i class="fas fa-users"></i>
+             • Leadership orienté actions et résultats - Orange Digital Center
+    </div>
+
+    <p></p>
+
+    <div class="cert-item">
+        <i class="fas fa-robot"></i>
+        •  Construction d'un robot de A à Z - Orange Digital Center
+    </div>
+
+    <p></p>
+
+    <div class="cert-item">
+        <i class="fas fa-brain"></i>
+        •  Automatisation des tâches avec l'IA - Orange Digital Center
+    </div>
+
+   <p></p>
+
+    <div class="cert-item">
+    <i class="fas fa-chart-line"></i>
+       •  Analyse de données avec l'IA - Orange Digital Center
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJETS -->
+<section id="projects" class="section-padding section-alt">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-number">05.</span>
+      <h2 class="section-title">Mes Projets</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="project-card">
+          <div class="project-img"><img src="images/projects/project01.png" alt="Projet 1" onerror="this.src='https://picsum.photos/seed/p1/600/400'"></div>
+          <div class="project-body">
+            <h4>TAFARAY-SENI · Gestion Réception des Novices</h4>
+            <p>Gestion des étudiants, suivi des paiements et génération de QR codes d'identification en PDF.</p>
+            <div class="project-tags"><span>PHP</span><span>CSS</span><span>SQLite</span><span>FPDF</span></div>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#"><i class="fas fa-cloud"></i> Railway</a>
+              <a href="#"><i class="fas fa-code"></i> VSCode</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <div class="project-img"><img src="images/projects/project2.png" alt="Projet 2" onerror="this.src='https://picsum.photos/seed/p2/600/400'"></div>
+          <div class="project-body">
+            <h4>Gestion de Pointage et Congé de Personnel</h4>
+            <p>Application de gestion du pointage, des congés et de la paie des employés,
+               avec génération de fiches de paie en PDF et notifications email automatiques.</p>
+            <div class="project-tags"><span>PHP</span><span>CSS</span><span>MySQL</span><span>DOMPDF</span><span>PHPMailer</span></div>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#"><i class="fas fa-server"></i> XAMPP</a>
+              <a href="#"><i class="fas fa-code"></i> VSCode</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <div class="project-img"><img src="images/projects/project3.png" alt="Projet 3" onerror="this.src='https://picsum.photos/seed/p3/600/400'"></div>
+          <div class="project-body">
+            <h4>Projet Gestion des Employés</h4>
+            <p>Application SPA de gestion des employés avec authentification, CRUD, bilan statistique et graphiques interactifs.</p>
+            <div class="project-tags"><span>REACT</span><span>PHP</span><span>MySQL</span><span>Vite</span></div>
+            <div class="project-links">
+             <a href="#"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#"><i class="fas fa-cloud"></i> Vercel</a>
+            <a href="#"><i class="fas fa-code"></i> VSCode</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="project-card">
+          <div class="project-img"><img src="images/projects/project4.png" alt="Projet 4" onerror="this.src='https://picsum.photos/seed/p4/600/400'"></div>
+          <div class="project-body">
+            <h4>Projet Routage IP — RIPv2 & OSPF</h4>
+            <p>Simulation d'une infrastructure réseau de 9 routeurs avec configuration, 
+              comparaison et redistribution des protocoles de routage dynamique RIP et OSPF.</p>
+            <div class="project-tags"><span>GNS3</span><span>Cisco IOS</span><span>Wireshark</span><span>RIPv2</span><span>OSPF</span></div>
+            <div class="project-links">
+              <a href="#"><i class="fas fa-network-wired"></i> GNS3</a>
+              <a href="#"><i class="fas fa-chart-line"></i> Wireshark</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <div class="project-img"><img src="images/projects/project5.jpg" alt="Projet 5" onerror="this.src='https://picsum.photos/seed/p5/600/400'"></div>
+          <div class="project-body">
+            <h4>Projet Routage IP — RIPv2 & OSPF</h4>
+            <p>Simulation d'une infrastructure réseau de 9 routeurs avec configuration, 
+              comparaison et redistribution des protocoles de routage dynamique RIP et OSPF.</p>
+            <div class="project-tags"><span>GNS3</span><span>Cisco IOS</span><span>Wireshark</span><span>RIPv2</span><span>OSPF</span></div>
+            <div class="project-links">
+              <a href="#"><i class="fas fa-network-wired"></i> GNS3</a>
+              <a href="#"><i class="fas fa-chart-line"></i> Wireshark</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <div class="project-img"><img src="images/projects/project6.png" alt="Projet 6" onerror="this.src='https://picsum.photos/seed/p6/600/400'"></div>
+          <div class="project-body">
+            <h4>Système de surveillance d'incendie</h4>
+            <p>Le système détecte fumée, flamme et chaleur anormale, puis déclenche une alarme automatique pour alerter. </p>
+            <div class="project-tags"><span>C++</span><span>Arduino</span><span>LCD I2C</span><span>Capteur : fumée, flamme, température .</span></div>
+            <div class="project-links">
+              <a href="#"><i class="fas fa-code"></i> Arduino IDE</a>
+              <a href="#"><i class="fas fa-microchip"></i> Tinkercad</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-padding">
+  <div class="container">
+    
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-number">06.</span>
+      <h2 class="section-title">Me contacter</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="row g-5">
+
+      <!-- LEFT -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <h3 class="mb-4">Travaillons ensemble</h3>
+        <p class="text-muted-light">
+         Vous avez une idée, un projet ou une opportunité de collaboration ? Je suis pleinement disponible pour échanger, réfléchir ensemble et proposer des solutions modernes, efficaces et adaptées à vos besoins.
+         N'hésitez pas à me contacter : je vous répondrai avec sérieux et considération, dans les meilleurs délais possibles.
+        </p>
+
+        <div class="contact-info mt-4">
+
+          <!-- EMAIL -->
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <p>
+                <a href="mailto:rafalimananamamitiana0@gmail.com">
+                  rafalimananamamitiana0@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- PHONE -->
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Téléphone</strong>
+              <p>
+                <a href="tel:+261321805611">+261 32 18 056 11</a> • <a href="tel:+261382248847">+261 38 22 488 47</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Localisation</strong>
+              <p>Fianarantsoa, Madagascar</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form id="contactForm" class="contact-form" action="php/contact.php" method="POST">
+
+          <div id="formAlert"></div>
+
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+            </div>
+
+            <div class="col-md-6">
+              <input type="email" name="email" class="form-control" placeholder="Votre email" required>
+            </div>
+
+            <div class="col-12">
+              <input type="text" name="subject" class="form-control" placeholder="Sujet" required>
+            </div>
+
+            <div class="col-12">
+              <textarea name="message" class="form-control" rows="6" placeholder="Votre message" required></textarea>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-neon w-100">
+                <i class="fas fa-paper-plane me-2"></i>
+                Envoyer le message
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container text-center">
+    <div class="footer-socials mb-3">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="mailto:votre@email.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="mb-0">© <span id="year"></span> <strong>RAFALIMANANA Mamitiana</strong> — Tous droits réservés.</p>
+    <p class="footer-credit">Développeur Full Stack | Web • Systèmes • Réseaux </p>
+  </div>
+</footer>
+
+<a href="#hero" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
