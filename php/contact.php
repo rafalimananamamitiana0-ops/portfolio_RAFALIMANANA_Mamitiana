@@ -111,7 +111,3 @@ if ($envoyé) {
     ]);
 }
 
-
-var_dump(getenv('GMAIL_USERNAME'));
-var_dump(getenv('GMAIL_APP_PASSWORD'));
-exit;
