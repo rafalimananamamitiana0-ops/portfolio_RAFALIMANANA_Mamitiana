@@ -66,9 +66,24 @@ $headers .= "X-Mailer: PHP/" . phpversion();
 $mail = new PHPMailer(true);
 
 try {
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
+   $mail->isSMTP();
+$mail->Host = gethostbyname('smtp.gmail.com');  // <-- niova ho izao
+$mail->SMTPAuth = true;
+$mail->Username = getenv('GMAIL_USERNAME');
+$mail->Password = getenv('GMAIL_APP_PASSWORD');
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port = 587;
+
+$mail->CharSet = 'UTF-8';
+
+// Ampio ihany koa ity mba hisorohana ny olana SSL/certificate matetika mitranga amin'i Render
+$mail->SMTPOptions = [
+    'ssl' => [
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true,
+    ],
+];
     $mail->Username = getenv('GMAIL_USERNAME');
     $mail->Password = getenv('GMAIL_APP_PASSWORD');
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
