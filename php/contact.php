@@ -90,8 +90,8 @@ try {
 
 } catch (Exception $e) {
     $envoyé = false;
+    $erreur = $mail->ErrorInfo;
 }
-
 
 
 // === (Optionnel) sauvegarde locale en fichier .log ===
@@ -100,11 +100,18 @@ $ligne = "[" . date('Y-m-d H:i:s') . "] $name <$email> | $subject\n$message\n---
 @file_put_contents($log, $ligne, FILE_APPEND);
 
 if ($envoyé) {
-    echo json_encode(['success' => true, 'message' => 'Merci ! Votre message a bien été envoyé. Je vous répondrai très vite.']);
-} else {
-    // Sur localhost mail() peut échouer mais le log est créé : on renvoie tout de même succès simulé
     echo json_encode([
         'success' => true,
-        'message' => 'Message reçu ! (En local, mail() peut être désactivé — vérifiez php/messages.log)'
+        'message' => 'Merci ! Votre message a bien été envoyé.'
+    ]);
+} else {
+    echo json_encode([
+        'success' => false,
+        'message' => 'Erreur envoi email : ' . ($erreur ?? 'Erreur inconnue')
     ]);
 }
+
+
+var_dump(getenv('GMAIL_USERNAME'));
+var_dump(getenv('GMAIL_APP_PASSWORD'));
+exit;
