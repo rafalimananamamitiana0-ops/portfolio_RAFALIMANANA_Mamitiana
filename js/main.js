@@ -51,9 +51,42 @@ if (typeEl) {
   type();
 }
 
-// === Formulaire contact AJAX ===
+// === Formulaire contact AJAX (avec retry automatique) ===
 const form = document.getElementById('contactForm');
 if (form) {
+
+  // Envoie le formulaire, et réessaie automatiquement si le serveur
+  // répond 502/503/504 (cas fréquent avec Render free tier qui redémarre)
+  async function submitWithRetry(url, formData, alertBox, retriesLeft = 3, delayMs = 4000) {
+    let res;
+    try {
+      res = await fetch(url, { method: 'POST', body: formData });
+    } catch (networkErr) {
+      // Vraie coupure réseau (pas de réponse du tout)
+      if (retriesLeft > 0) {
+        alertBox.innerHTML = '<div class="alert alert-info">⏳ Connexion au serveur... nouvelle tentative dans quelques secondes.</div>';
+        await new Promise(r => setTimeout(r, delayMs));
+        return submitWithRetry(url, formData, alertBox, retriesLeft - 1, delayMs);
+      }
+      throw new Error('network');
+    }
+
+    if ([502, 503, 504].includes(res.status)) {
+      if (retriesLeft > 0) {
+        alertBox.innerHTML = '<div class="alert alert-info">⏳ Le serveur se réveille, nouvelle tentative dans quelques secondes...</div>';
+        await new Promise(r => setTimeout(r, delayMs));
+        return submitWithRetry(url, formData, alertBox, retriesLeft - 1, delayMs);
+      }
+      throw new Error('server-down');
+    }
+
+    if (!res.ok) {
+      throw new Error('http-' + res.status);
+    }
+
+    return res.json();
+  }
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const alertBox = document.getElementById('formAlert');
@@ -63,22 +96,23 @@ if (form) {
     btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Envoi en cours...';
 
     try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-      const data = await res.json();
+      const data = await submitWithRetry(form.action, new FormData(form), alertBox);
       if (data.success) {
         alertBox.innerHTML = '<div class="alert alert-success">✅ ' + data.message + '</div>';
         form.reset();
       } else {
         alertBox.innerHTML = '<div class="alert alert-danger">❌ ' + data.message + '</div>';
       }
-    } catch {
-      alertBox.innerHTML = '<div class="alert alert-danger">❌ Erreur réseau. Vérifiez votre serveur PHP.</div>';
+    } catch (err) {
+      if (err.message === 'server-down') {
+        alertBox.innerHTML = '<div class="alert alert-danger">❌ Le serveur met du temps à répondre. Merci de réessayer dans une minute.</div>';
+      } else {
+        alertBox.innerHTML = '<div class="alert alert-danger">❌ Erreur réseau. Vérifiez votre connexion.</div>';
+      }
     } finally {
       btn.disabled = false;
       btn.innerHTML = original;
-      setTimeout(() => alertBox.innerHTML = '', 6000);
+      setTimeout(() => alertBox.innerHTML = '', 8000);
     }
   });
 }
-
-
