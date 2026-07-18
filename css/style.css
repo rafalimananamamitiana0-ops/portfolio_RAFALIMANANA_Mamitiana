@@ -397,25 +397,13 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#
     overflow-x:hidden;
   }
 
-  /* #scale-outer: io no "manapaka" (overflow:hidden) ny banga
-     mety hitranga eo ambanin'ilay contenu scalé — ny hauteur
-     marina dia apetraky ny JS (naturalHeight * scale). */
-  #scale-outer{
-    overflow:hidden;
-    position:relative;
-    width:100%;
-  }
-
   #app-scale{
-    /* width sy transform dia apetraky ny JS (responsive-scale.js)
-       satria mila mihatra araka ny largeur écran marina isaky
-       ny appareil (JS: scale = innerWidth / 1200). Satria misy
-       transform eto, izy ihany no lasa "containing block" ho an'ny
-       elements position:fixed ao anatiny (navbar, orbes, backToTop)
-       ka tsy ilaina manova ny position:fixed ho absolute intsony. */
-    transform-origin: top left;
-    display:block;
-    position:relative;
+    /* "zoom" dia mahakely tanteraka ny layout (tsy toy ny
+       transform:scale izay "peinture" fotsiny) — ka tsy misy
+       banga tavela eo ambany, ary mihatra avy hatrany rehefa
+       vao mamaky ny CSS ny navigateur, tsy misy JS/fiandrasana. */
+    width: 1200px;
+    zoom: calc(100vw / 1200);
   }
 }
 
