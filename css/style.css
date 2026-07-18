@@ -397,30 +397,25 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#
     overflow-x:hidden;
   }
 
+  /* #scale-outer: io no "manapaka" (overflow:hidden) ny banga
+     mety hitranga eo ambanin'ilay contenu scalé — ny hauteur
+     marina dia apetraky ny JS (naturalHeight * scale). */
+  #scale-outer{
+    overflow:hidden;
+    position:relative;
+    width:100%;
+  }
+
   #app-scale{
     /* width sy transform dia apetraky ny JS (responsive-scale.js)
        satria mila mihatra araka ny largeur écran marina isaky
-       ny appareil (JS: scale = innerWidth / 1200). Ity CSS ity
-       dia mametra ny valeur "far default" raha tsy mbola nandeha
-       ny JS (avant chargement) mba tsy hisy "saut" mibaribary. */
+       ny appareil (JS: scale = innerWidth / 1200). Satria misy
+       transform eto, izy ihany no lasa "containing block" ho an'ny
+       elements position:fixed ao anatiny (navbar, orbes, backToTop)
+       ka tsy ilaina manova ny position:fixed ho absolute intsony. */
     transform-origin: top left;
     display:block;
-  }
-
-  /* Ampiharina ihany koa amin'ny elements "fixed" (navbar, orbes,
-     backToTop) satria ao anatin'ny #app-scale izy rehetra ka
-     miova containing-block rehefa misy transform ao amin'ny reny */
-  .custom-navbar,
-  .bg-grid,
-  .bg-orb,
-  #backToTop{
-    position:absolute;
-  }
-  .custom-navbar{
-    top:0; left:0; right:0;
-  }
-  #backToTop{
-    bottom:30px; right:30px;
+    position:relative;
   }
 }
 
