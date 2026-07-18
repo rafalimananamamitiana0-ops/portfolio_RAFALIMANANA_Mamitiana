@@ -382,19 +382,50 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif;font-weight:700;color:#
 #backToTop.show{display:flex}
 #backToTop:hover{transform:translateY(-5px) scale(1.1)}
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE — "CLONE" DU DESKTOP SUR MOBILE =====
+   Fanovana natao: tsy misy fanovana natao tamin'ny règles
+   teo aloha. Ity ampahany ity ihany no vaovao: ny #app-scale
+   (div mpisarona ny contenu rehetra ao amin'ny <body>) dia
+   "scalé" (kelezina proportionnellement) mba hitovy tanteraka
+   amin'ny endriny amin'ny ordinateur, na dia kely aza ny écran.
+   Ny script js/responsive-scale.js no manisy ilay valeur
+   transform:scale(...) sy width mifanaraka amin'ny largeur
+   an'ny écran (fa io CSS io ihany dia efa mametra ny fototra).
+   ====================================================== */
 @media (max-width: 991px){
-  .hero-section{text-align:center}
-  .hero-buttons,.hero-socials{justify-content:center}
-  .hero-desc{margin-left:auto;margin-right:auto}
-  .timeline::before{left:15px}
-  .timeline-item{padding-left:50px}
-  .timeline-dot{left:7px}
+  html, body{
+    overflow-x:hidden;
+  }
+
+  #app-scale{
+    /* width sy transform dia apetraky ny JS (responsive-scale.js)
+       satria mila mihatra araka ny largeur écran marina isaky
+       ny appareil (JS: scale = innerWidth / 1200). Ity CSS ity
+       dia mametra ny valeur "far default" raha tsy mbola nandeha
+       ny JS (avant chargement) mba tsy hisy "saut" mibaribary. */
+    transform-origin: top left;
+    display:block;
+  }
+
+  /* Ampiharina ihany koa amin'ny elements "fixed" (navbar, orbes,
+     backToTop) satria ao anatin'ny #app-scale izy rehetra ka
+     miova containing-block rehefa misy transform ao amin'ny reny */
+  .custom-navbar,
+  .bg-grid,
+  .bg-orb,
+  #backToTop{
+    position:absolute;
+  }
+  .custom-navbar{
+    top:0; left:0; right:0;
+  }
+  #backToTop{
+    bottom:30px; right:30px;
+  }
 }
+
 @media (max-width: 576px){
-  .section-padding{padding:70px 0}
-  .hero-buttons{flex-direction:column}
-  .hero-buttons .btn{width:100%}
+  /* Tsy misy fanovana amin'ny disposition — ny scale (JS) ihany
+     no mikely ny zavatra rehetra mba hitovy amin'ilay endrika
+     ordinateur, na dia amin'ny telephone kely indrindra aza. */
 }
-
-
